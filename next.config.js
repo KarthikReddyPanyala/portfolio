@@ -18,6 +18,8 @@ const nextConfig = {
   assetPrefix: '',
   // Prevent conflicts with GitHub Pages
   trailingSlash: true,
+  // Ensure static files are copied
+  distDir: 'out',
 }
 
 module.exports = nextConfig 
