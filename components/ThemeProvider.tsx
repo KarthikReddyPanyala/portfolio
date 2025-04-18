@@ -19,6 +19,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const savedTheme = localStorage.getItem('theme') as Theme
     if (savedTheme) {
       setTheme(savedTheme)
+    } else {
+      // Set default theme based on user's system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      setTheme(prefersDark ? 'dark' : 'light')
     }
   }, [])
 
@@ -28,6 +32,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     // Apply theme to document
     document.documentElement.classList.remove('light', 'dark')
     document.documentElement.classList.add(theme)
+    document.body.classList.remove('light', 'dark')
+    document.body.classList.add(theme)
   }, [theme])
 
   return (
