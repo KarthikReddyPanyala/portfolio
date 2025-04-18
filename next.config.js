@@ -2,12 +2,17 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    unoptimized: true,
     domains: ['localhost'],
   },
-  // Add these for GitHub Pages
+  // Configuration for GitHub Pages
   output: 'export',
+  // No basePath needed for username.github.io repository
   basePath: '',
+  // Disable asset prefix for username.github.io repository
   assetPrefix: '',
+  // Prevent conflicts with GitHub Pages
+  trailingSlash: true,
 }
 
 module.exports = nextConfig 
