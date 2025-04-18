@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 const Hero = () => {
   return (
@@ -17,12 +16,10 @@ const Hero = () => {
             className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-[color:var(--primary)] shadow-xl"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--primary)]/20 to-[color:var(--primary)]/20" />
-            <Image
+            <img
               src="/profile.jpg"
               alt="Karthik's Profile Picture"
-              fill
-              className="object-cover"
-              priority
+              className="w-full h-full object-cover"
             />
           </motion.div>
 
