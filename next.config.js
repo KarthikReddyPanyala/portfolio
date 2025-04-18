@@ -6,8 +6,8 @@ const nextConfig = {
   },
   // Add these for GitHub Pages
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio/' : '',
+  basePath: '',
+  assetPrefix: '',
 }
 
 module.exports = nextConfig 
