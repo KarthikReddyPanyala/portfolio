@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme - Retro Computer */
+  --background: #f0f0f0;
+  --text: #000000;
+  --text-secondary: #333333;
+  --text-description: #1a1a1a;
+  --primary: #000000;
+  --hover: #e0e0e0;
+  --border: #808080;
+  --card-bg: #ffffff;
+  --card-hover: #f8f8f8;
+  --accent: #ff00ff;
+  --glow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Dark theme - CRT Monitor */
+.dark {
+  --background: #000000;
+  --text: #00ff00;
+  --text-secondary: #00cc00;
+  --text-description: #00ff00;
+  --primary: #ff00ff;
+  --hover: #1a1a1a;
+  --border: #00ff00;
+  --card-bg: #0a0a0a;
+  --card-hover: #1a1a1a;
+  --accent: #ff00ff;
+  --glow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Retro CRT Scanline Effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Section Headings */
+.section-heading {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-shadow: var(--glow);
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: ">";
+  position: absolute;
+  right: -2rem;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 0;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.card:hover::before {
+  transform: translateX(100%);
+}
+
+.card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--glow);
+}
+
+/* Tags */
+.tag {
+  background-color: var(--background);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tag:hover {
+  background-color: var(--primary);
+  color: var(--background);
+  box-shadow: var(--glow);
+}
+
+/* Contact Icons */
+.contact-icon {
+  color: var(--text);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-icon:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: var(--glow);
+}
+
+/* Section Backgrounds */
+.section-bg {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border);
+  padding: 2rem;
+  position: relative;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.dark .section-bg {
+  background-color: rgba(10, 10, 10, 0.7);
+}
+
+.section-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 0, 0.1) 2px,
+    rgba(0, 255, 0, 0.1) 4px
+  );
+  pointer-events: none;
+  opacity: 0.05;
+}
+
+/* Profile Image */
+.profile-image {
+  border: 2px solid var(--primary);
+  box-shadow: var(--glow);
+}
+
+/* Timeline Items */
+.timeline-item {
+  border-left: 2px solid var(--primary);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: ">";
+  position: absolute;
+  left: -0.5rem;
+  color: var(--primary);
+  animation: blink 1s infinite;
+}
+
+/* Input Fields */
+input, textarea {
+  background-color: var(--background);
+  border: 2px solid var(--border);
+  color: var(--text);
+  font-family: 'VT323', monospace;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: var(--glow);
+}
+
+/* Buttons */
+button {
+  background-color: var(--background);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-family: 'Press Start 2P', cursive;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary);
+  color: var(--background);
+  box-shadow: var(--glow);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-all duration-300 font-medium;
+  }
+  
+  .btn-primary {
+    @apply btn bg-[#00ff00] text-black hover:bg-[#00e600];
+  }
+  
+  .btn-secondary {
+    @apply btn bg-[#1a1a1a] text-white hover:bg-[#2a2a2a];
+  }
+  
+  .description-text {
+    @apply text-[#1a1a1a] dark:text-[#00ff00];
+  }
+  
+  .card-description {
+    @apply text-[#1a1a1a] dark:text-[#00ff00] text-base leading-relaxed;
+  }
+  
+  .section-description {
+    @apply text-[#1a1a1a] dark:text-[#00ff00] text-lg;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.theme-switcher {
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-options,
+.font-size-options,
+.palette-options {
+  margin-bottom: 1.5rem;
+}
+
+.theme-switcher h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.theme-buttons,
+.font-size-buttons,
+.palette-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.theme-button,
+.font-size-button,
+.palette-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--background);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-button:hover,
+.font-size-button:hover,
+.palette-button:hover {
+  background: var(--hover);
+}
+
+.theme-button.active,
+.font-size-button.active,
+.palette-button.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* AI Trainer styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+/* Chart styles */
+.chart-container {
+  position: relative;
+  height: 160px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.chart-bar {
+  position: absolute;
+  bottom: 0;
+  width: 2px;
+  background: var(--primary);
+  transition: height 0.3s ease;
+}
+
+/* Project Carousel styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px) rotateY(0deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal animations */
+.modal-enter {
+  animation: modalEnter 0.3s ease-out;
+}
+
+.modal-exit {
+  animation: modalExit 0.3s ease-in;
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modalExit {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+} 

@@ -1,0 +1,70 @@
+:root {
+  /* Default theme variables */
+  --primary-color: #3b82f6;
+  --secondary-color: #6366f1;
+  --background-color: #ffffff;
+  --text-color: #1f2937;
+  --font-size-base: 16px;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --primary-color: #60a5fa;
+  --secondary-color: #818cf8;
+  --background-color: #1f2937;
+  --text-color: #f3f4f6;
+}
+
+/* AI mode */
+[data-theme="ai"] {
+  --primary-color: #10b981;
+  --secondary-color: #34d399;
+  --background-color: #111827;
+  --text-color: #d1d5db;
+}
+
+/* Color palettes */
+[data-palette="blue"] {
+  --primary-color: #3b82f6;
+  --secondary-color: #6366f1;
+}
+
+[data-palette="purple"] {
+  --primary-color: #8b5cf6;
+  --secondary-color: #a78bfa;
+}
+
+[data-palette="green"] {
+  --primary-color: #10b981;
+  --secondary-color: #34d399;
+}
+
+[data-palette="red"] {
+  --primary-color: #ef4444;
+  --secondary-color: #f87171;
+}
+
+/* Font sizes */
+[data-font-size="small"] {
+  --font-size-base: 14px;
+}
+
+[data-font-size="medium"] {
+  --font-size-base: 16px;
+}
+
+[data-font-size="large"] {
+  --font-size-base: 18px;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: var(--font-size-base);
+}
+
+/* Theme-specific styles */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease;
+} 
