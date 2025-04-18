@@ -14,13 +14,13 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-[color:var(--primary)] shadow-xl"
+            style={{
+              backgroundImage: 'url("https://karthikreddypanyala.github.io/KarthiReddyPanyala.github.io/profile.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--primary)]/20 to-[color:var(--primary)]/20" />
-            <img
-              src="/profile.jpg"
-              alt="Karthik's Profile Picture"
-              className="w-full h-full object-cover"
-            />
           </motion.div>
 
           {/* Text Content */}
