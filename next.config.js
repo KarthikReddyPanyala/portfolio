@@ -1,25 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
-  },
-  // Configuration for GitHub Pages
   output: 'export',
-  // No basePath needed for username.github.io repository
-  basePath: '',
-  // Disable asset prefix for username.github.io repository
-  assetPrefix: '',
-  // Prevent conflicts with GitHub Pages
-  trailingSlash: true,
-  // Ensure static files are copied
-  distDir: 'out',
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio/',
+  images: {
+    unoptimized: true
+  }
 }
 
 module.exports = nextConfig 
