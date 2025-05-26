@@ -19,7 +19,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Enhancing Data Diversity and Robustness for Multi-Organ Prediction- test",
+    title: "Enhancing Data Diversity",
     description: "Developed a robust deep learning pipeline for real-time multi-organ segmentation in laparoscopic videos. The project focused on enhancing generalization across diverse surgical scenes using domain adaptation, transfer learning, and synthetic data augmentation.",
     image: '/projects/medical-segmentation.jpg',
     techStack: [
