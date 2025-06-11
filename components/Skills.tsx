@@ -6,23 +6,23 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Python", "C", "Java", "HTML", "SQL"]
+      skills: ["Python", "C", "HTML", "SQL", "Java", "MySQL"]
     },
     {
       title: "Machine Learning & AI Tools",
-      skills: ["TensorFlow", "PyTorch"]
+      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "SHAP", "OpenCV"]
     },
     {
-      title: "Databases",
-      skills: ["MySQL"]
+      title: "Data Science & Modelling",
+      skills: ["Regression", "Classification", "Transfer Learning", "Domain Adaptation"]
     },
     {
-      title: "Software",
-      skills: ["PowerPoint", "Excel", "Word"]
+      title: "Productivity & OS",
+      skills: ["PowerPoint", "Excel", "Word", "Windows", "macOS"]
     },
     {
-      title: "Operating Systems",
-      skills: ["Windows", "Mac"]
+      title: "Tools & DevOps",
+      skills: ["Git", "GitHub", "Docker", "CI/CD Pipelines", "Agile", "Jira"]
     }
   ]
 

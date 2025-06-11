@@ -3,14 +3,26 @@ import { motion } from 'framer-motion'
 const Experience = () => {
   const experiences = [
     {
+      title: "Team Lead, AI Capstone Project",
+      company: "Saint Louis University",
+      period: "Jan 2025 – May 2025",
+      type: "Hybrid",
+      responsibilities: [
+        "Spearheaded development of YOLOv11 pipeline segmentation using 8000+ real laparoscopic frames",
+        "Executed underperforming-class duplication, targeted augmentation, and better contour extraction to improve mask quality",
+        "Integrated pseudo-labeling of synthetic frames using a trained YOLOv11 model, merging real and synthetic annotations for robust training",
+        "Achieved reliable per-class segmentation accuracy with validation mAP50-95 ≥ 0.73 and sub-20 ms inference speed"
+      ]
+    },
+    {
       title: "Team Lead, Social Media Analyst",
       company: "Excelerate Internship",
       period: "Jun 2023 – Jul 2023",
       type: "Remote",
       responsibilities: [
-        "Lead a Team in social media analysis and digital marketing strategies",
-        "Implemented market research and analyzed engagement trends",
-        "Implemented content strategies that improved audience reach and interaction"
+        "Directed a 5-member team to analyze 1,000+ social media posts and trends across 4 platforms using trend analysis tools",
+        "Boosted engagement by 20% and reach by 25% with optimized content strategies",
+        "Generated 3 strategic reports with actionable insights to refine digital outreach campaigns"
       ]
     },
     {
@@ -19,8 +31,9 @@ const Experience = () => {
       period: "Jul 2023 - Aug 2023",
       type: "Remote",
       responsibilities: [
-        "Lead a 5-member team to apply data visualization techniques to analyze business insights, improving analysis efficiency",
-        "Designed effective and engaging data presentation using best practices"
+        "Led visual analysis of 7,000+ business records using data storytelling and interactive dashboards",
+        "Reduced reporting time by 36% by creating automated visualizations",
+        "Designed 2 dashboards using the best practices in user-centric data presentation"
       ]
     }
   ]

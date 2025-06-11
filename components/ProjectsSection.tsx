@@ -3,53 +3,57 @@ import { motion } from 'framer-motion'
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Enhancing Data Diversity and Robustness for Multi-Organ Prediction",
-      description: "Developed a robust deep learning pipeline for real-time multi-organ segmentation in laparoscopic videos. The project focused on enhancing generalization across diverse surgical scenes using domain adaptation, transfer learning, and synthetic data augmentation.",
-      techStack: [
-        "YOLOv11",
-        "CycleGAN",
-        "Transfer Learning",
-        "Explainable AI",
-        "Federated Learning",
-        "SHAP",
-        "EigenCAM",
-        "Medical Imaging",
-        "Python",
-        "PyTorch"
-      ],
+      title: "Enhancing Data Diversity and Robustness for DaVinci-Generated Videos",
+      description: "Developed and trained a YOLO v11 model on real surgical video data for organ segmentation, focusing on improving model performance and inference speed.",
+      techStack: ["YOLOv11", "Computer Vision", "Deep Learning", "Python", "PyTorch"],
       highlights: [
-        "Integrated CycleGAN-based domain adaptation to handle lighting and anatomical variation across patients",
-        "Used transfer learning and pretrained YOLOv11 for segmentation to improve training efficiency",
-        "Integrated Explainable AI to visualize and interpret model decisions",
-        "Explored federated learning strategies for collaborative training without data sharing"
-      ],
-      current: true
+        "Developed and trained a YOLO v11 model on real surgical video data for organ segmentation",
+        "Evaluated performance on object detection tasks and attained an inference speed of ≤ 20 ms/frame",
+        "Conducted object detection evaluations and analyzed model performance on unseen videos"
+      ]
+    },
+    {
+      title: "AI News Summarizer Bot",
+      description: "Created an AI-powered bot that fetches and summarizes news articles using advanced natural language processing techniques.",
+      techStack: ["Python", "NLP", "T5", "RSS", "Web Scraping"],
+      highlights: [
+        "Created an AI-powered bot that fetches live BBC RSS feeds and summarizes articles using a pretrained T5-samll model",
+        "Offers category section, live scraping and on-the-fly summarization"
+      ]
+    },
+    {
+      title: "Explainable AI for Mushroom Classification",
+      description: "Built a SHAP-explained Random Forest model for mushroom classification with high accuracy and interpretability.",
+      techStack: ["Python", "SHAP", "Random Forest", "Machine Learning", "UCI Dataset"],
+      highlights: [
+        "Built a SHAP-explained Random Forest model using UCI mushrooms dataset with 22 features",
+        "Achieved 98% training Accuracy and 96% test accuracy with 0.3% and 0.4% loss respectively"
+      ]
+    },
+    {
+      title: "Fake News Detection with SHAP Explainability",
+      description: "Developed a logistic regression model with TF-IDF vectorization to classify articles as real or fake, with explainable AI features.",
+      techStack: ["Python", "Logistic Regression", "TF-IDF", "SHAP", "Streamlit"],
+      highlights: [
+        "Developed a logistic regression model with TF-IDF vectorization to classify articles as real or fake",
+        "Deployed using a Streamlit Interface for real-time user interaction"
+      ]
     },
     {
       title: "A Realistic Image Generation of Face from Text Description",
-      description: "Developed a GAN to generate realistic human faces based on text description. Used Python, TensorFlow and GAN architecture to create a model that can generate faces from textual inputs.",
+      description: "Engineered a GAN pipeline to generate photorealistic human faces from text descriptions using advanced deep learning techniques.",
       techStack: ["Python", "TensorFlow", "GAN", "Deep Learning", "Computer Vision"],
       highlights: [
-        "Developed a GAN to generate realistic human faces based on text description",
-        "Used Python, TensorFlow and GAN architecture"
+        "Engineered a GAN pipeline using TensorFlow to generate photorealistic human faces from text description",
+        "Applied Python, TensorFlow and GAN architecture"
       ]
     },
     {
       title: "Fall Detection of Elderly People using Machine Learning",
-      description: "Designed and implemented a machine learning model to detect falls in elderly individuals using sensor data, creating a real-time monitoring system for enhanced safety.",
-      techStack: ["Python", "Machine Learning", "Sensor Data", "Real-time Processing"],
+      description: "Built and deployed a sensor-based data fall detection system for elderly people using supervised learning techniques.",
+      techStack: ["Python", "Machine Learning", "Sensor Data", "Supervised Learning"],
       highlights: [
-        "Designed an ML model to detect falls in elderly individuals using sensor data",
-        "Implemented real-time monitoring system"
-      ]
-    },
-    {
-      title: "Vehicle Parking Management System",
-      description: "Developed a web-based system for automated allocation and fine enforcement in parking management, streamlining the parking process and improving efficiency.",
-      techStack: ["Web Development", "Python", "Database", "Automation"],
-      highlights: [
-        "Developed a web-based system for automated allocation",
-        "Implemented fine enforcement functionality"
+        "Built and deployed a sensor-based data fall detection system for elderly people using supervised learning"
       ]
     },
     {
@@ -57,8 +61,16 @@ const ProjectsSection = () => {
       description: "Created an ML regression model to predict California housing prices using various machine learning tools and libraries.",
       techStack: ["Python", "Scikit-learn", "OpenCV", "Hugging Face", "Machine Learning"],
       highlights: [
-        "Created an ML regression model to predict California housing prices",
-        "Trained on California housing dataset using Python, Scikit-learn, OpenCV"
+        "Created an ML regression model to predict California housing prices and deployed it on Hugging Face",
+        "Trained on California housing dataset using Python, Scikit-learn, OpenCV, Hugging Face"
+      ]
+    },
+    {
+      title: "Warfarin Dosage Prediction",
+      description: "Developed a machine learning model to predict optimal warfarin dosage using anonymized patient records.",
+      techStack: ["Python", "Machine Learning", "Healthcare", "Data Analysis"],
+      highlights: [
+        "Trained a model to predict optimal warfarin dosage using anonymized patient records"
       ]
     }
   ]
@@ -91,11 +103,6 @@ const ProjectsSection = () => {
                   <h3 className="text-xl font-bold text-text-light dark:text-text-dark">
                     {project.title}
                   </h3>
-                  {project.current && (
-                    <span className="px-3 py-1 bg-black dark:bg-primary-500 text-white dark:text-black rounded-full text-sm font-medium animate-pulse">
-                      Currently Working On
-                    </span>
-                  )}
                 </div>
                 <p className="text-gray-600 dark:text-primary-400">
                   {project.description}

@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 const Education = () => {
   const education = [
     {
-      school: "Saint Louis University School of Science and Engineering",
-      location: "St. Louis, MO",
-      degree: "Masters in Artificial Intelligence",
-      period: "Expected May 2025",
+      school: "Saint Louis University",
+      location: "MO",
+      degree: "Master of Science in Artificial Intelligence",
+      period: "2023-2025",
       current: true
     },
     {
@@ -49,11 +49,7 @@ const Education = () => {
                   )}
                 </div>
                 <div className="md:self-start">
-                  <span className={`inline-block px-4 py-1 rounded-sm text-sm ${
-                    edu.current 
-                      ? 'bg-transparent text-text-light dark:bg-black dark:text-text-dark'
-                      : 'bg-gray-700/20 text-text-light dark:bg-[#1a1a1a] dark:text-primary-400'
-                  }`}>
+                  <span className="inline-block px-4 py-1 rounded-sm text-sm bg-gray-700/20 text-text-light dark:bg-[#1a1a1a] dark:text-primary-400">
                     {edu.period}
                   </span>
                 </div>

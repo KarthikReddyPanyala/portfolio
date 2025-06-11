@@ -15,7 +15,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-[color:var(--primary)] shadow-xl"
             style={{
-              backgroundImage: 'url("/portfolio/profile.jpg")',
+              backgroundImage: 'url("/profile.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
@@ -34,12 +34,12 @@ const Hero = () => {
               Hi, I'm Karthik Panyala
             </h1>
             <h2 className="text-2xl sm:text-3xl font-bold">
-              <span className="font-['Press_Start_2P'] tracking-wider text-[color:var(--text)]">AI & ML</span>
+              <span className="font-['Press_Start_2P'] tracking-wider text-[color:var(--text)]">AI Graduate Student</span>
               <br />
-              <span className="font-['Press_Start_2P'] tracking-wider text-[color:var(--text)]">Graduate Student</span>
+              <span className="font-['Press_Start_2P'] tracking-wider text-[color:var(--text)]">Machine Learning Engineer</span>
             </h2>
             <p className="text-lg sm:text-xl max-w-2xl mx-auto text-[color:var(--text-description)]">
-              Graduate student in Artificial Intelligence with a deep interest in machine learning, deep learning, and data-driven solutions. Passionate about creating meaningful impact through AI.
+              AI graduate student with hands-on experience in machine learning, deep learning, and data-driven solutions, building scalable models using modern frameworks like PyTorch and TensorFlow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <a href="#projects" className="px-6 py-3 bg-transparent border-2 border-[color:var(--primary)] text-[color:var(--text)] hover:bg-[color:var(--primary)] hover:text-[color:var(--background)] font-['Press_Start_2P'] text-sm tracking-wider transform transition-all duration-300 hover:scale-105">
