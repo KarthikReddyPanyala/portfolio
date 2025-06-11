@@ -15,7 +15,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-[color:var(--primary)] shadow-xl"
             style={{
-              backgroundImage: 'url("/profile.jpg")',
+              backgroundImage: 'url("profile.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
